@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomUpload /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <span
+      class="sc-bdfBwQ dCikys"
+    >
+      <div
+        class="ant-upload ant-upload-select ant-upload-select-text"
+        style="display: none;"
+      >
+        <span
+          class="ant-upload"
+          role="button"
+          tabindex="0"
+        >
+          <input
+            accept=""
+            data-testid="custom-upload"
+            style="display: none;"
+            type="file"
+          />
+        </span>
+      </div>
+      <div
+        class="ant-upload-list ant-upload-list-text"
+      />
+    </span>
+  </div>
+</body>
+`;

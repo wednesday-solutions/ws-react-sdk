@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.002" viewBox="0 0 16 16.002">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_edit" transform="rotate(-54.97 14.414 7.125)">
+        <path id="Rectangle_957" d="M0 0H16V16H0z" class="cls-1" transform="rotate(54.97 14.407 7.134)"/>
+        <g id="Group_1629" fill="#3164c6" transform="translate(1.721 .866)">
+            <g id="Union_12">
+                <path d="M15.002 2.593H2.642L.951 1.546 2.642.5h12.36v2.093z" class="cls-4" transform="translate(0 .003)"/>
+                <path d="M14.502 2.093V1H2.784l-.883.546.883.547h11.718m1 1H2.5L0 1.546 2.5 0h13.002v3.093z" transform="translate(0 .003)"/>
+            </g>
+            <g id="Rectangle_952" stroke="#3164c6" transform="translate(16.001)">
+                <path d="M0 0H1V3.092H0z" class="cls-4"/>
+                <rect height="2.092" x=".5" y=".5" class="cls-1"/>
+            </g>
+        </g>
+    </g>
+</svg>

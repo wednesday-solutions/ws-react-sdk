@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormItem /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="ant-row ant-form-item sc-bdfBwQ cUsKxY"
+      data-testid="form-item"
+    >
+      <div
+        class="ant-col ant-form-item-control"
+      >
+        <div
+          class="ant-form-item-control-input"
+        >
+          <div
+            class="ant-form-item-control-input-content"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

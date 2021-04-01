@@ -1,0 +1,9 @@
+package-lock.json
+.idea/
+switcher_backup.env
+coverage
+yarn-error.log
+.DS_STORE
+node_modules
+.history
+.vscode

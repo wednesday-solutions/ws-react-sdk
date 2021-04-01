@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomDisableFormButton /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="ant-row ant-form-item sc-bdfBwQ cUsKxY"
+      data-testid="custom-disable-form-button"
+    >
+      <div
+        class="ant-col ant-form-item-control"
+      >
+        <div
+          class="ant-form-item-control-input"
+        >
+          <div
+            class="ant-form-item-control-input-content"
+          >
+            <button
+              class="ant-btn sc-gsTCUz hmKVcQ"
+              disabled=""
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
