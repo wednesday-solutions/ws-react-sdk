@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackgroundImg /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-bdfBwQ euZnZe"
+      data-testid="background-img"
+    />
+  </div>
+</body>
+`;

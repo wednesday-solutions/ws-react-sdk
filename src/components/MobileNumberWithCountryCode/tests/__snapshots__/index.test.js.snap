@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MobileNumberWithCountryCode /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-jSgupP cXdENn"
+      data-testid="mobile-number-with-country-code"
+    >
+      <div
+        class="ant-row ant-form-item sc-dlfnbm ieHnGf sc-eCssSg bvlVKX"
+        data-testid="form-item"
+      >
+        <div
+          class="ant-col ant-form-item-control"
+        >
+          <div
+            class="ant-form-item-control-input"
+          >
+            <div
+              class="ant-form-item-control-input-content"
+            >
+              <input
+                autocomplete="off"
+                class="ant-input sc-gsTCUz fLXihu"
+                data-testid="code-input"
+                id="countryCode"
+                maxlength="4"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ant-row ant-form-item sc-dlfnbm ieHnGf sc-gKsewC kqPJey"
+        data-testid="form-item"
+      >
+        <div
+          class="ant-col ant-form-item-control"
+        >
+          <div
+            class="ant-form-item-control-input"
+          >
+            <div
+              class="ant-form-item-control-input-content"
+            >
+              <span
+                class="ant-input-affix-wrapper sc-gsTCUz fLXihu sc-fubCfw bejoSb"
+              >
+                <input
+                  autocomplete="off"
+                  class="ant-input"
+                  data-testid="mobile-input"
+                  id="phone"
+                  placeholder="contact_no"
+                  type="number"
+                  value=""
+                />
+                <span
+                  class="ant-input-suffix"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

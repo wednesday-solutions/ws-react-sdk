@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfileWidget /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-gsTCUz jhMctP"
+      data-testid="profile-widget"
+    >
+      <div
+        class="sc-dlfnbm bezHed"
+      >
+        <div
+          class="sc-hKgILt epGQjk"
+        >
+          <div
+            class="sc-iBPRYJ drIJeq"
+          >
+            <label
+              for="profilePic"
+            >
+              <div
+                class="sc-fubCfw jkfXYs"
+              >
+                <img
+                  class="sc-pFZIQ iUSsxT"
+                  src="IMAGE_MOCK"
+                />
+              </div>
+            </label>
+            <input
+              accept="image/jpeg, image/jpg, image/png"
+              class="sc-jrAGrp gmVUeL"
+              data-cy="profilePic"
+              id="profilePic"
+              name="profilePic"
+              type="file"
+            />
+          </div>
+          <span
+            data-testid="user-name-initial"
+          >
+            <div
+              class="sc-jSgupP jQoqQN"
+            >
+              <p
+                class="sc-bdfBwQ bZojWc sc-gKsewC hdfsZu"
+                data-testid="t"
+              />
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

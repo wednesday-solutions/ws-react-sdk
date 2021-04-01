@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomButton /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <button
+      class="ant-btn sc-bdfBwQ cDCNSQ"
+      data-testid="custom-button"
+      type="button"
+    />
+  </div>
+</body>
+`;

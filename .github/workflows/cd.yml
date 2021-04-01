@@ -1,0 +1,47 @@
+name: ws-react-sdk CD
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  build_and_test:
+    name: checkout-build-commit
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get branch name
+        id: vars
+        run: echo ::set-output name=branch::${GITHUB_REF#refs/*/}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: ./rollup-${{steps.vars.outputs.branch}}.sh
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Gitflow
+          author_email: git@wednesday.is
+          message: 'Created lib'
+          add: 'lib/'
+
+      - name: Bump version
+        run: |
+          git config --global user.email "git@wednesday.is"
+          git config --global user.name "Gitflow"
+          npm version patch -m 'Bump up'
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

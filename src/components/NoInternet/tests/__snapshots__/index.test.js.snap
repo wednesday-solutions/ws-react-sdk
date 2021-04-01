@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NoInternet /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div>
+      <div
+        class="sc-dlfnbm hWxGDI"
+      >
+        <img
+          class="sc-hKgILt bmiPUu"
+        />
+        <p
+          class="sc-bdfBwQ bZojWc sc-gsTCUz cWOkuF"
+          data-testid="warning"
+        >
+          whoof
+        </p>
+        <p
+          class="sc-bdfBwQ bZojWc sc-eCssSg dfoiiY"
+          data-testid="t"
+        >
+          slow_or_no
+        </p>
+        <p
+          class="sc-bdfBwQ bZojWc sc-jSgupP iCOWkB"
+          data-testid="t"
+        >
+          please_check
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+`;

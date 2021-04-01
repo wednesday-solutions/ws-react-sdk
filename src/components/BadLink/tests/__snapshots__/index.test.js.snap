@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BadLink /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div>
+      <div
+        class="sc-dlfnbm hWxGDI"
+      >
+        <img
+          class="sc-hKgILt bmiPUu"
+        />
+        <p
+          class="sc-bdfBwQ bZojWc sc-gsTCUz cWOkuF"
+          data-testid="warning"
+        >
+          clawful
+        </p>
+        <p
+          class="sc-bdfBwQ bZojWc sc-eCssSg dfoiiY"
+          data-testid="t"
+        >
+          page_not_found
+        </p>
+        <button
+          class="ant-btn ant-btn-primary sc-jSgupP hnNccu"
+          type="button"
+        >
+          <span>
+            Take Me Home
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;
