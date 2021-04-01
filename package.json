@@ -1,6 +1,6 @@
 {
   "name": "ws-react-sdk",
-  "version": "0.0.75",
+  "version": "0.0.1",
   "sideEffects": false,
   "module": "lib/es/index.js",
   "main": "lib/es/index.js",
