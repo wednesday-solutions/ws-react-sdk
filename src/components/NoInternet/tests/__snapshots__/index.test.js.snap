@@ -9,7 +9,6 @@ exports[`<NoInternet /> should render and match the snapshot 1`] = `
       >
         <img
           class="sc-hKgILt bmiPUu"
-          src="IMAGE_MOCK"
         />
         <p
           class="sc-bdfBwQ bZojWc sc-gsTCUz cWOkuF"
