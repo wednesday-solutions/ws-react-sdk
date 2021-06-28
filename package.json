@@ -2,7 +2,7 @@
   "name": "ws-react-sdk",
   "version": "0.0.1",
   "sideEffects": false,
-  "module": "lib/es/index.js",
+  "module": "lib/es/components.js",
   "main": "lib/es/index.js",
   "files": [
     "lib"
@@ -187,6 +187,5 @@
     "redux-saga": "1.1.3",
     "reduxsauce": "^1.1.0",
     "styled-components": "5.2.1"
-  },
-  "browser": "./lib/es"
+  }
 }
