@@ -52,8 +52,7 @@ export const getCognitoFormFields = props => {
   const formFields = [
     {
       name: 'email',
-      // value: props?.location?.state?.vetData?.email
-      value: 123
+      value: props?.location?.state?.vetData?.email
     }
   ];
 
@@ -82,6 +81,7 @@ export const getCognitoFormFields = props => {
   });
   return formFields;
 };
+
 export const promisify = callback => {
   return new Promise((resolve, reject) => callback(resolve, reject));
 };

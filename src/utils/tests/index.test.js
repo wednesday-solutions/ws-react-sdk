@@ -1,4 +1,4 @@
-import { showNotification, NOTIFICATION_TYPE, getCognitoFormFields, promisify } from '../index';
+import { showNotification, NOTIFICATION_TYPE, getCognitoFormFields, promisify, convertGqlResponse } from '../index';
 
 describe('Notification_Type tests', () => {
   it('should ensure that it is not null', () => {
@@ -23,11 +23,9 @@ describe('Notification tests', () => {
 
 describe('getCognitoFormFields tests', () => {
   const mockdata = {
-    props: {
-      location: {
-        state: {
-          userAttributes: [{ Name: 'given_name', Value: 'Rohan' }]
-        }
+    location: {
+      state: {
+        userAttributes: [{ Name: 'given_name', Value: 'Rohan' }, { Name: 'phone_number', Value: '91232122' }]
       }
     }
   };
@@ -36,18 +34,32 @@ describe('getCognitoFormFields tests', () => {
     expect(data).not.toBeNull();
   });
 
-  it('should ensure that value is phone number', () => {
-    const mockdataR = {
-      location: {
-        state: {
-          userAttributes: [{ Name: 'given_name', Value: 'Rohan' }]
-        }
+  it('should ensure that length of array is correct', () => {
+    const data = getCognitoFormFields(mockdata);
+    const length = mockdata.location.state.userAttributes.length;
+    expect(data.length).toBe(2 * length + 1);
+  });
+
+  it('should ensure that correct data is being returned', () => {
+    const data = getCognitoFormFields(mockdata);
+
+    mockdata.location.state.userAttributes.forEach(attr => {
+      if (attr.Name === 'given_name') {
+        const filteredName = data.filter(value => value.name === 'fullName');
+        const filteredBusinessName = data.filter(value => value.name === 'businessName');
+
+        expect(filteredName.length).toBeGreaterThan(0);
+        expect(filteredBusinessName.length).toBeGreaterThan(0);
+        expect(filteredBusinessName.length).toEqual(filteredName.length);
+      } else if (attr.Name === 'phone_number') {
+        const filteredPhone = data.filter(value => value.name === 'phone');
+        const filteredCountryCode = data.filter(value => value.name === 'countryCode');
+
+        expect(filteredPhone.length).toBeGreaterThan(0);
+        expect(filteredCountryCode.length).toBeGreaterThan(0);
+        expect(filteredCountryCode.length).toEqual(filteredPhone.length);
       }
-    };
-    const data = getCognitoFormFields(mockdataR);
-    // eslint-disable-next-line no-console
-    console.log(data);
-    expect(data).not.toBeNull();
+    });
   });
 });
 
@@ -55,5 +67,11 @@ describe('promisify tests', () => {
   it('should ensure that it is returning', () => {
     const promise = promisify();
     expect(promise).not.toBeNull();
+  });
+});
+
+describe('convertGqlResponse tests', () => {
+  it('should ensure that it returns empty array when response is not being sent', () => {
+    expect(convertGqlResponse()).toStrictEqual([]);
   });
 });

@@ -1,7 +1,18 @@
 import { COGNITO_ERROR_TYPES, getUserPool, getUserPoolAppClient, getUserPoolID, userPool } from '../cognitoUtils';
-import { CognitoUserPool } from 'amazon-cognito-identity-js';
 
 describe('Cognito tests', () => {
+  const OLD_ENV = process.env;
+  const awsProps = {
+    AWS_COGNITO_USER_POOL_ID: '123',
+    AWS_COGNITO_USER_POOL_APP_CLIENT: '123214'
+  };
+  beforeEach(() => {
+    process.env = { ...OLD_ENV, ...awsProps };
+  });
+  afterAll(() => {
+    process.env = OLD_ENV;
+  });
+
   it('should ensure that it will return same data if userpool is present', () => {
     expect(getUserPool()).toBe(userPool);
   });
@@ -12,20 +23,21 @@ describe('Cognito tests', () => {
       ClientId: process.env.AWS_COGNITO_USER_POOL_APP_CLIENT
     };
     const data = getUserPool();
-    const mockUserPool = new CognitoUserPool(poolData);
-    // expect(mockUserPool).toEqual(data);
+    expect(data.ClientId).toBe(poolData.ClientId);
+    expect(data.UserPoolId).toBe(poolData.UserPoolId);
   });
 
   it('should ensure it returns AWS_COGNITO_USER_POOL_ID ', () => {
     const id = process.env.AWS_COGNITO_USER_POOL_ID;
     const poolId = getUserPoolID();
-    // console.log(poolId);
+    expect(poolId).not.toBeUndefined();
     expect(poolId).toBe(id);
   });
 
   it('should ensure it returns correct AWS_COGNITO_USER_POOL_APP_CLIENT', () => {
     const client = process.env.AWS_COGNITO_USER_POOL_APP_CLIENT;
     const AppClient = getUserPoolAppClient();
+    expect(client).not.toBeUndefined();
     expect(AppClient).toBe(client);
   });
 

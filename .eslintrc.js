@@ -33,6 +33,6 @@ module.exports = {
 		GLOBAL: false,
 		it: false,
 		expect: false,
-		describe: false
+		describe: true
 	}
 };
