@@ -1,6 +1,6 @@
 import { CognitoUserPool } from 'amazon-cognito-identity-js';
 
-let userPool;
+export let userPool;
 export function getUserPool() {
   if (!userPool) {
     const poolData = {
