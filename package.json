@@ -2,7 +2,6 @@
   "name": "ws-react-sdk",
   "version": "0.0.1",
   "sideEffects": false,
-  "module": "lib/es/components.js",
   "main": "lib/es/index.js",
   "files": [
     "lib"
@@ -151,6 +150,7 @@
     "prettier-standard": "15.0.1",
     "rimraf": "2.6.3",
     "rollup": "^2.36.2",
+    "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-babel-minify": "^10.0.0",
     "rollup-plugin-commonjs": "^10.1.0",

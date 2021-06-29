@@ -9,6 +9,7 @@ import json from '@rollup/plugin-json';
 import url from 'rollup-plugin-url';
 import { terser } from 'rollup-plugin-terser';
 import injectProcessEnv from 'rollup-plugin-inject-process-env';
+import analyze from 'rollup-plugin-analyzer';
 import pkg from '../package.json';
 const path = require('path');
 const dotenv = require('dotenv');
@@ -89,6 +90,11 @@ export default {
       ]
     }),
     injectProcessEnv(envKeys),
-    json()
+    json(),
+    analyze({
+      summaryOnly: true,
+      showExports: true,
+      hideDeps: true
+    })
   ]
 };
