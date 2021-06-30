@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-// import { fireEvent } from '@testing-library/dom'
+import { fireEvent } from '@testing-library/dom';
 import { renderWithIntl, timeout } from '@utils/testUtils';
 import Timer from '../index';
 
@@ -24,5 +24,23 @@ describe('<Timer />', () => {
     const { getAllByText } = renderWithIntl(<Timer initialSeconds={3} retryNo={2} />);
     await timeout(3500);
     expect(getAllByText(/RESEND/).length).toBe(1);
+  });
+  it('should handle resend button click and match the snapshot', async () => {
+    const jestSpy = jest.fn();
+    const { getByTestId } = renderWithIntl(
+      <Timer initialSeconds={0} initialMinute={0} retryNo={2} resendCallback={jestSpy} />
+    );
+    fireEvent.click(getByTestId('t'));
+    await timeout(3500);
+    expect(getByTestId).toMatchSnapshot();
+    expect(jestSpy).toBeCalled();
+  });
+
+  it('should handle minutes interval and match the snapshot ', async () => {
+    const jestSpy = jest.fn();
+    const { getByTestId } = renderWithIntl(
+      <Timer initialSeconds={0} initialMinute={2} retryNo={2} resendCallback={jestSpy} />
+    );
+    expect(getByTestId).toMatchSnapshot();
   });
 });

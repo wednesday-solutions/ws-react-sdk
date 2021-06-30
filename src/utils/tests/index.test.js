@@ -1,4 +1,11 @@
-import { showNotification, NOTIFICATION_TYPE, getCognitoFormFields, promisify, convertGqlResponse } from '../index';
+import {
+  showNotification,
+  NOTIFICATION_TYPE,
+  getCognitoFormFields,
+  promisify,
+  convertGqlResponse,
+  renderSelectOptions
+} from '../index';
 
 describe('Notification_Type tests', () => {
   it('should ensure that it is not null', () => {
@@ -14,10 +21,6 @@ describe('Notification tests', () => {
   it('should ensure that it return undefined if message is not sent', () => {
     const notification = showNotification();
     expect(notification).toBeUndefined();
-  });
-  it('should ensure that it should call correct Notification types', () => {
-    // const icon = 'icWarning';
-    showNotification('hello');
   });
 });
 
@@ -64,7 +67,7 @@ describe('getCognitoFormFields tests', () => {
 });
 
 describe('promisify tests', () => {
-  it('should ensure that it is returning', () => {
+  it('should ensure that it is not returning null value', () => {
     const promise = promisify();
     expect(promise).not.toBeNull();
   });
@@ -73,5 +76,12 @@ describe('promisify tests', () => {
 describe('convertGqlResponse tests', () => {
   it('should ensure that it returns empty array when response is not being sent', () => {
     expect(convertGqlResponse()).toStrictEqual([]);
+  });
+});
+
+describe('renderSelectOptions tests', () => {
+  it('should return correct size', () => {
+    const Options = renderSelectOptions(['apple', 'kiwi']);
+    expect(Options.length).toBe(2);
   });
 });
