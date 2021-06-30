@@ -2,7 +2,7 @@
   "name": "ws-react-sdk",
   "version": "0.0.1",
   "sideEffects": false,
-  "main": "lib/es/index.js",
+  "browser": "lib/es/index.js",
   "files": [
     "lib"
   ],
