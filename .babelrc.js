@@ -8,7 +8,7 @@ module.exports = {
         useBuiltIns: 'entry'
       }
     ],
-    '@babel/preset-react'
+    ['@babel/preset-react', { modules: false }]
   ],
   plugins: [
     'lodash',
