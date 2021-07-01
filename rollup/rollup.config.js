@@ -7,9 +7,9 @@ import alias from '@rollup/plugin-alias';
 import images from '@rollup/plugin-image';
 import postcss from 'rollup-plugin-postcss';
 import analyze from 'rollup-plugin-analyzer';
-import commonjs from 'rollup-plugin-commonjs';
+// import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
-import nodeResolve from 'rollup-plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import injectProcessEnv from 'rollup-plugin-inject-process-env';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import pkg from '../package.json';
@@ -36,10 +36,52 @@ export default {
   output: [
     {
       file: 'lib/es/index.js',
-      preserveModules: false,
-      format: 'esm',
-      sourcemap: true
+      esModule: true
     }
+  ],
+  treeshake: 'smallest',
+  plugins: [
+    nodeResolve(),
+    // commonjs(),
+    peerDepsExternal(),
+    alias({
+      entries: [
+        { find: '@src', replacement: path.resolve(__dirname, '../src') },
+        { find: '@services', replacement: path.resolve(__dirname, '../src/services') },
+        { find: '@selectors', replacement: path.resolve(__dirname, '../src/selectors') },
+        { find: '@reducers', replacement: path.resolve(__dirname, '../src/reducers') },
+        { find: '@utils', replacement: path.resolve(__dirname, '../src/utils') },
+        { find: '@themes', replacement: path.resolve(__dirname, '../src/themes') },
+        { find: '@components', replacement: path.resolve(__dirname, '../src/components') },
+        { find: '@images', replacement: path.resolve(__dirname, '../src/images') }
+      ]
+    }),
+    injectProcessEnv(intitializeEnvKeys()),
+    babel({ babelHelpers: 'bundled', exclude: 'node_modules/**' }),
+    images(),
+    json(),
+    url(),
+    postcss({
+      extensions: ['.css', '.scss', '.less'],
+      use: [
+        'sass',
+        [
+          'less',
+          {
+            javascriptEnabled: true,
+            modifyVars: {
+              'primary-color': '#af0974'
+            }
+          }
+        ]
+      ]
+    }),
+    terser(),
+    analyze({
+      summaryOnly: true,
+      showExports: true,
+      hideDeps: true
+    })
   ],
   external: [
     'antd',
@@ -59,52 +101,5 @@ export default {
     ...Object.keys(pkg.peerDependencies || {}),
     'formatjs/intl-relativetimeformat',
     'formatjs'
-  ],
-  plugins: [
-    json(),
-    images(),
-    peerDepsExternal(),
-    url(),
-    terser(),
-    nodeResolve({
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
-    }),
-    commonjs({
-      include: /\**node_modules\**/
-    }),
-    babel({ babelHelpers: 'bundled', exclude: 'node_modules/**' }),
-    postcss({
-      extensions: ['.css', '.scss', '.less'],
-      use: [
-        'sass',
-        [
-          'less',
-          {
-            javascriptEnabled: true,
-            modifyVars: {
-              'primary-color': '#af0974'
-            }
-          }
-        ]
-      ]
-    }),
-    alias({
-      entries: [
-        { find: '@src', replacement: path.resolve(__dirname, '../src') },
-        { find: '@services', replacement: path.resolve(__dirname, '../src/services') },
-        { find: '@selectors', replacement: path.resolve(__dirname, '../src/selectors') },
-        { find: '@reducers', replacement: path.resolve(__dirname, '../src/reducers') },
-        { find: '@utils', replacement: path.resolve(__dirname, '../src/utils') },
-        { find: '@themes', replacement: path.resolve(__dirname, '../src/themes') },
-        { find: '@components', replacement: path.resolve(__dirname, '../src/components') },
-        { find: '@images', replacement: path.resolve(__dirname, '../src/images') }
-      ]
-    }),
-    injectProcessEnv(intitializeEnvKeys()),
-    analyze({
-      summaryOnly: true,
-      showExports: true,
-      hideDeps: true
-    })
   ]
 };

@@ -14,9 +14,8 @@ import T from '@components/T';
 import { colors, styles, fonts, media } from '@themes';
 import { getCroppedImg } from '@utils/canvasUtils';
 import { appIntl } from '@components/IntlGlobalProvider';
-import LoadingOutlined from '@ant-design/icons/lib/icons/LoadingOutlined';
 import iconEdit from '@images/ic-edit.svg';
-import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
+import { MinusOutlined, PlusOutlined, LoadingOutlined } from '@ant-design/icons';
 const Container = styled.div`
   width: 6rem;
   position: relative;
