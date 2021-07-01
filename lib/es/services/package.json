@@ -1,0 +1,11 @@
+{
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "amazon-cognito-identity-js": "4.5.7",
+    "antd": "4.10.2"
+  }
+}

@@ -12,6 +12,7 @@ import { terser } from 'rollup-plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import injectProcessEnv from 'rollup-plugin-inject-process-env';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import generatePackageJson from 'rollup-plugin-generate-package-json';
 import pkg from '../package.json';
 
 const intitializeEnvKeys = () => {
@@ -81,6 +82,13 @@ export default {
       summaryOnly: true,
       showExports: true,
       hideDeps: true
+    }),
+    generatePackageJson({
+      baseContents: {
+        main: 'index.js',
+        module: 'index.js',
+        files: ['index.js']
+      }
     })
   ],
   external: [
