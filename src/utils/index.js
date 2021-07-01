@@ -42,10 +42,11 @@ export const showNotification = (message, type = NOTIFICATION_TYPE.INFO) => {
       notificationMethod = notification.info;
       icon = icWarning;
   }
-  notificationMethod({
-    content: message,
-    icon: <StyledToastIcon src={icon} />
-  });
+  return { notificationMethod, icon };
+  // notificationMethod({
+  //   content: message,
+  //   icon: <StyledToastIcon src={icon} />
+  // });
 };
 
 export const getCognitoFormFields = props => {

@@ -1,4 +1,5 @@
-import { COGNITO_ERROR_TYPES, getUserPool, getUserPoolAppClient, getUserPoolID, userPool } from '../cognitoUtils';
+import { COGNITO_ERROR_TYPES, getUserPool, getUserPoolAppClient, getUserPoolID } from '../cognitoUtils';
+import { MOCKS } from '../../../__mocks__/services/cognito/constants';
 
 describe('Cognito tests', () => {
   const OLD_ENV = process.env;
@@ -14,7 +15,7 @@ describe('Cognito tests', () => {
   });
 
   it('should ensure that it will return same data if userpool is present', () => {
-    expect(getUserPool()).toBe(userPool);
+    expect(MOCKS.userPool.getUserPool()).toBe(MOCKS.userPool.userPoolVal);
   });
 
   it('should ensure correct params are being passed if userpool is not present', async () => {

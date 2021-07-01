@@ -38,7 +38,13 @@ export const MOCKS = {
       };
     }
   },
-  congitoNullUser: null
+  congitoNullUser: null,
+  userPool: {
+    userPoolVal: 123,
+    getUserPool() {
+      return this.userPoolVal;
+    }
+  }
 };
 
 export function resetMocks() {
