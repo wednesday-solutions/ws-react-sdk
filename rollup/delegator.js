@@ -11,9 +11,9 @@ function DelegateRollUp(dir) {
   this.buildEntryPath = path.resolve(this.projectRootPath, 'lib/es/index.js');
 
   this.setDirModules = function() {
-    this.dirModules = readdirSync(this.dirPath, { withFileTypes: true }).filter(
-      ({ name: dirName }) => !dirName?.includes('test')
-    );
+    this.dirModules = readdirSync(this.dirPath, { withFileTypes: true })
+      .filter(({ name: dirName }) => !dirName?.includes('test'))
+      .filter(({ name: dirName }) => !dirName?.includes('index'));
   };
 
   this.get = function() {
@@ -50,7 +50,7 @@ function DelegateRollUp(dir) {
     };
     const exports = this.dirModules.map(exportTemplate);
     const exportsData = exports.join('\n');
-    const combinedData = (data || '') + exportsData;
+    const combinedData = (data || '') + '\n' + exportsData;
     writeFileSync(this.buildEntryPath, combinedData);
   };
 
