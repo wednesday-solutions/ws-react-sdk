@@ -43,10 +43,10 @@ function DelegateRollUp(dir) {
     const exportTemplate = dirModule => {
       const { name: moduleName } = dirModule;
       if (dirModule.isDirectory()) {
-        return `export { default as ${moduleName} } from './${moduleName}'`;
+        return `export { default as ${moduleName} } from './${this.dir}/${moduleName}'`;
       }
       const moduleNameSubExt = moduleName.split('.js')[0];
-      return `export { default as ${moduleNameSubExt} } from './${moduleNameSubExt}'`;
+      return `export { default as ${moduleNameSubExt} } from './${this.dir}/${moduleNameSubExt}'`;
     };
     const exports = this.dirModules.map(exportTemplate);
     const exportsData = exports.join('\n');
