@@ -18,9 +18,36 @@ describe('Notification_Type tests', () => {
 });
 
 describe('Notification tests', () => {
+  const mockNotification = jest.fn((message, type) => {
+    switch (type) {
+      case 1:
+        return { notificationMethod: 'success', icons: 'icSuccess' };
+      case 2:
+        return { notificationMethod: 'error', icons: 'icError' };
+      case 3:
+        return { notificationMethod: 'warning', icons: 'icWarning' };
+      default:
+        return { notificationMethod: 'info', icons: 'icWarning' };
+    }
+  });
   it('should ensure that it return undefined if message is not sent', () => {
     const notification = showNotification();
     expect(notification).toBeUndefined();
+  });
+
+  it('should make sure correct notification method is being called', () => {
+    const message = 'hello';
+    showNotification(message, 1);
+    expect(mockNotification(message, 1)).toStrictEqual({ notificationMethod: 'success', icons: 'icSuccess' });
+
+    showNotification(message, 2);
+    expect(mockNotification(message, 2)).toStrictEqual({ notificationMethod: 'error', icons: 'icError' });
+
+    showNotification(message, 3);
+    expect(mockNotification(message, 3)).toStrictEqual({ notificationMethod: 'warning', icons: 'icWarning' });
+
+    showNotification(message);
+    expect(mockNotification(message)).toStrictEqual({ notificationMethod: 'info', icons: 'icWarning' });
   });
 });
 
