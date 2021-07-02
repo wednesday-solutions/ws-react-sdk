@@ -4,7 +4,7 @@ config.input = 'src/components/index.js';
 config.output = [
   {
     ...config.output[0],
-    file: 'lib/es/components/index.js'
+    file: 'lib/es/components.js'
   }
 ];
 

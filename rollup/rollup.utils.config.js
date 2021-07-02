@@ -5,7 +5,7 @@ config.output = [
   {
     ...config.output[0],
     ...config.output[1],
-    file: 'lib/es/utils/index.js'
+    file: 'lib/es/utils.js'
   }
 ];
 export default config;
