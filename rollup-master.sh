@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf lib
 yarn rollup:dev:services --environment ENV_NAME:production,BUILD:production | \
 yarn rollup:dev:themes --environment ENV_NAME:production,BUILD:production | \
 yarn rollup:dev:components --environment ENV_NAME:production,BUILD:production | \
