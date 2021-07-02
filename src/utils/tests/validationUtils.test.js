@@ -26,6 +26,16 @@ describe('Number Validation Utils tests', () => {
     const code = 91;
     expect(isValidNumber(value, code)).toBeTruthy();
   });
+  it('should ensure no is valid when user value is empty', () => {
+    const value = '';
+    const code = 91;
+    expect(isValidNumber(value, code)).toBeFalsy();
+  });
+  it('should ensure no is valid when countrycode is empty', () => {
+    const value = '9958828795';
+    const code = null;
+    expect(isValidNumber(value, code)).toBeFalsy();
+  });
 
   it('should ensure that it throws err when value is number ', () => {
     const value = 9958828795;

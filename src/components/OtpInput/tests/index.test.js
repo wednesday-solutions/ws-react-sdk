@@ -5,13 +5,9 @@
  */
 
 import React from 'react';
-// import { fireEvent } from '@testing-library/dom'
-import { renderWithIntl } from '@utils/testUtils';
+import { renderWithIntl, timeout } from '@utils/testUtils';
 import OtpInput from '../index';
 import { fireEvent } from '@testing-library/dom';
-import { updatePhoneNumberRequest } from '../../../services/cognito';
-import { timeout } from '../../../utils/testUtils';
-// import { updatePhoneNumberRequest } from '../../../services/cognito';
 
 describe('<OtpInput />', () => {
   it('should render and match the snapshot', () => {
