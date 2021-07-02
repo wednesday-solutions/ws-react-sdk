@@ -22,7 +22,8 @@ function DelegateRollUp(dir) {
       if (dirModule.isDirectory()) {
         return { [moduleName]: `src/${this.dir}/${moduleName}/index.js` };
       }
-      return { [moduleName]: `src/${this.dir}/${moduleName}` };
+      const moduleNameSubExt = moduleName.split('.js')[0];
+      return { [moduleNameSubExt]: `src/${this.dir}/${moduleName}` };
     };
     const buildSourceEntryMap = (map, dirModule) => {
       return {
