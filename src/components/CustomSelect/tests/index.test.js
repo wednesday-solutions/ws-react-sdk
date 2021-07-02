@@ -5,7 +5,6 @@
  */
 
 import React from 'react';
-// import { fireEvent } from '@testing-library/dom'
 import { renderWithIntl } from '@utils/testUtils';
 import CustomSelect from '../index';
 
@@ -18,5 +17,10 @@ describe('<CustomSelect />', () => {
   it('should contain 1 CustomSelect component', () => {
     const { getAllByTestId } = renderWithIntl(<CustomSelect />);
     expect(getAllByTestId('custom-select').length).toBe(1);
+  });
+  it('should ensure getPoupup container triggered', () => {
+    const popUpSpy = jest.fn();
+    renderWithIntl(<CustomSelect getPopupContainer={popUpSpy} />);
+    expect(popUpSpy).toBeCalled();
   });
 });
