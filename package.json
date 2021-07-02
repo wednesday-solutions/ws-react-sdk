@@ -4,7 +4,7 @@
   "sideEffects": false,
   "description": "Library of common components, containers, and utils used across the Wednesday Ecosystem",
   "main": "lib/es/index.js",
-  "module": "lib/es/index.js",
+  "browser": "lib/es/index.js",
   "files": [
     "lib",
     "lib/es",
