@@ -145,3 +145,28 @@ export const getValidPhoneNumber = (countryCode, mobile) => {
   }
   return getValidCountryCode(countryCode) + p;
 };
+
+export default {
+  type,
+  isRequired,
+  isOTPValid,
+  isEmailValid,
+  isValidNumber,
+  isNumberValid,
+  isMobileValid,
+  isAddressValid,
+  isPasswordValid,
+  isFullnameValid,
+  isFullNameValid,
+  doPasswordsMatch,
+  isYearsOfExpValid,
+  isCountryCodeValid,
+  getValidPhoneNumber,
+  getValidCountryCode,
+  isLicenseNumberValid,
+  isMobileValidWithCountry,
+  isValidNumberWithCountry,
+  handlePhoneNumberValidation,
+  getCountryCodeAndStrippedNumber,
+  handlePhoneNumberValidationWithCountry
+};

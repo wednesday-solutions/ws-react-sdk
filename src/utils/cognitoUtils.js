@@ -27,3 +27,5 @@ export const COGNITO_ERROR_TYPES = {
   CODE_MISMATCH_EXCEPTION: 'CodeMismatchException',
   USER_NOT_FOUND_EXCEPTION: 'UserNotFoundException'
 };
+
+export default { COGNITO_ERROR_TYPES };

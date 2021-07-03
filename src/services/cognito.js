@@ -1,5 +1,5 @@
 import { CognitoUserPool, AuthenticationDetails, CognitoUser, CognitoUserAttribute } from 'amazon-cognito-identity-js';
-import { promisify } from '@utils';
+import { promisify } from '@utils/common';
 
 export async function getUserAttributes() {
   const cognitoUser = getUserPool().getCurrentUser();

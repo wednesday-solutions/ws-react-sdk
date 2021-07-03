@@ -15,7 +15,7 @@ import If from '@components/If';
 import T from '@components/T';
 import styled from 'styled-components';
 import { fonts, media, colors } from '@themes';
-import { getValidCountryCode, getValidPhoneNumber } from '../../utils';
+import { getValidCountryCode, getValidPhoneNumber } from '@utils/common';
 
 const CountryCode = styled(FormItem)`
   flex: 0.25;

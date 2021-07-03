@@ -34,7 +34,7 @@ describe('<For />', () => {
 
   it('should render the number of elements passed as props and should not add another layer of dom nesting', () => {
     const items = ['a', 'b'];
-    const { findByTestId, getAllByTestId } = renderWithIntl(
+    const { queryByTestId, getAllByTestId } = renderWithIntl(
       <For
         of={items}
         noParent
@@ -43,13 +43,12 @@ describe('<For />', () => {
         renderItem={item => <div data-testid="child">{`item: ${item}`} </div>}
       />
     );
-
-    expect(findByTestId('parent-span')).not.toBe();
+    expect(queryByTestId('parent-span')).toBeNull();
     expect(getAllByTestId('child').length).toEqual(items.length);
   });
 
   it('should not render anything when items is not passed', () => {
-    const { findByTestId } = renderWithIntl(
+    const { queryByTestId } = renderWithIntl(
       <For
         noParent
         ParentComponent={props => <span {...props} data-testid="parent-span" />}
@@ -57,7 +56,7 @@ describe('<For />', () => {
       />
     );
 
-    expect(findByTestId('parent-span')).not.toBe();
+    expect(queryByTestId('parent-span')).toBeNull();
 
     const rendered = renderWithIntl(
       <For
@@ -66,6 +65,6 @@ describe('<For />', () => {
       />
     );
 
-    expect(rendered.findByTestId('parent-span')).not.toBe();
+    expect(rendered.queryByTestId('parent-span')).toBeNull();
   });
 });
