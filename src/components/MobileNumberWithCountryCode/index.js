@@ -7,7 +7,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { updatePhoneNumberRequest } from '@services/cognito';
-import { isRequired, isValidNumberWithCountry } from '@utils/validationUtils';
+import { isRequired, isValidNumberWithCountry, getValidCountryCode, getValidPhoneNumber } from '@utils/validationUtils';
 import CustomInput from '@components/CustomInput';
 import FormItem from '@components/FormItem';
 import { appIntl } from '@components/IntlGlobalProvider';
@@ -15,7 +15,6 @@ import If from '@components/If';
 import T from '@components/T';
 import styled from 'styled-components';
 import { fonts, media, colors } from '@themes';
-import { getValidCountryCode, getValidPhoneNumber } from '@utils/common';
 
 const CountryCode = styled(FormItem)`
   flex: 0.25;
