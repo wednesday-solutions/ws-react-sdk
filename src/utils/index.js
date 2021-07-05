@@ -81,11 +81,12 @@ export const getCognitoFormFields = props => {
   });
   return formFields;
 };
+
 export const promisify = callback => {
   return new Promise((resolve, reject) => callback(resolve, reject));
 };
 export * from './validationUtils';
-export * from './cognitoUtils';
+export * from '../services/cognito';
 export * from './canvasUtils';
 export { loadable };
 
