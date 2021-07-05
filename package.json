@@ -22,7 +22,7 @@
   "homepage": "https://github.com/wednesday-solutions/ws-react-sdk",
   "license": "MIT",
   "scripts": {
-    "prepare": "install-peers",
+    "prepare": "yarn ./rollup-master.sh",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .eslintignore",
     "lint:eslint:fix": "eslint --ignore-path .eslintignore --fix",
