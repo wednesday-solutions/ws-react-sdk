@@ -26,10 +26,9 @@ module.exports = {
       only: ['./src'],
       plugins: [
         // 'lodash',
+        "@babel/plugin-transform-react-constant-elements",
         'transform-react-remove-prop-types',
         '@babel/plugin-transform-react-inline-elements',
-        // '@babel/plugin-transform-react-constant-elements'
-        '@babel/plugin-transform-modules-commonjs',
         ['import', { libraryName: 'antd', style: true }, 'antd']
       ]
     },
