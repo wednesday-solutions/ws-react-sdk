@@ -4,7 +4,7 @@
 module.exports = {
   // Automatically clear mock calls and instances between every tests
   clearMocks: true,
-  collectCoverageFrom: ['src/**/*.js', '!**/testUtils.js', 'rollup/delegator.js'],
+  collectCoverageFrom: ['src/**/*.js', '!**/testUtils.js'],
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
 
@@ -42,5 +42,7 @@ module.exports = {
   transformIgnorePatterns: ['<rootDir>/node_modules/(?!lodash-es)'],
 
   // Whether to use watchman for file crawling
-  watchman: true
+  watchman: true,
+
+  testPathIgnorePatterns: ['rollup/']
 };
