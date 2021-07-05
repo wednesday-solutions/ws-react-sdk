@@ -16,7 +16,7 @@ function DelegateRollUp(dir) {
       .filter(({ name: dirName }) => !dirName?.includes('index'));
   };
 
-  this.get = function() {
+  this.getConfig = function() {
     const getModuleEntry = dirModule => {
       const { name: moduleName } = dirModule;
       if (dirModule.isDirectory()) {
@@ -82,7 +82,7 @@ function DelegateRollUp(dir) {
   this.roll = async function() {
     const rollup = require('rollup');
     const config = require('./config.js');
-    const { input, output } = this.get();
+    const { input, output } = this.getConfig();
     async function build() {
       const bundle = await rollup.rollup({ ...config, input });
       await bundle.write(output);
