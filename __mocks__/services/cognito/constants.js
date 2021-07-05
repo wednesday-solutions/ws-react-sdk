@@ -40,7 +40,7 @@ export const MOCKS = {
   },
   congitoNullUser: null,
   userPool: {
-    userPoolVal: 123,
+    userPoolVal: '123',
     getUserPool() {
       return this.userPoolVal;
     }

@@ -18,9 +18,4 @@ describe('<CustomSelect />', () => {
     const { getAllByTestId } = renderWithIntl(<CustomSelect />);
     expect(getAllByTestId('custom-select').length).toBe(1);
   });
-  it('should ensure getPoupup container triggered', () => {
-    const popUpSpy = jest.fn();
-    renderWithIntl(<CustomSelect getPopupContainer={popUpSpy} />);
-    expect(popUpSpy).toBeCalled();
-  });
 });

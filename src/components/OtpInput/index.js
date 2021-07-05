@@ -46,7 +46,7 @@ async function resendOTP(props) {
 
 const renderResendOTP = props => (
   <ResendWrapper>
-    <Timer initialMinute={0} initialSeconds={59} retryNo={5} resendCallback={() => resendOTP(props)} />
+    <Timer initialMinute={0} initialSeconds={0} retryNo={5} resendCallback={() => resendOTP(props)} />
   </ResendWrapper>
 );
 

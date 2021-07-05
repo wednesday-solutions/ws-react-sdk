@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorBoundary should display an ErrorMessage if wrapped component throws 1`] = `undefined`;
-
 exports[`ErrorBoundary should match the snapshot 1`] = `undefined`;
+
+exports[`ErrorBoundary should throw Error 1`] = `
+Array [
+  <h1
+    data-testid="error"
+  >
+    something_went_wrong
+  </h1>,
+]
+`;

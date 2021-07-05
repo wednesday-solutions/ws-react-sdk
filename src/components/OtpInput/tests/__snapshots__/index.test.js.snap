@@ -23,12 +23,10 @@ exports[`<OtpInput /> should render and match the snapshot 1`] = `
             data-testid="timer"
           >
             <p
-              class="sc-dlfnbm gHVIOv"
+              class="sc-bdfBwQ gZxDMi sc-gsTCUz cEanxO"
+              data-testid="t"
             >
-               
-              0
-              :
-              59
+              RESEND
             </p>
           </div>
         </span>

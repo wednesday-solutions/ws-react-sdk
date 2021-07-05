@@ -17,7 +17,7 @@ describe('Cognito tests', () => {
   });
 
   it('should ensure that it will return same data if userpool is present', () => {
-    expect(MOCKS.userPool.getUserPool()).toBe(MOCKS.userPool.userPoolVal);
+    expect(getUserPool().UserPoolId).toBe(MOCKS.userPool.userPoolVal);
   });
 
   it('should ensure correct params are being passed if userpool is not present', async () => {

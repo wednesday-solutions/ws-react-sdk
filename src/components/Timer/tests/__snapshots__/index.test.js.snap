@@ -2,8 +2,6 @@
 
 exports[`<Timer /> should handle minutes interval and match the snapshot  1`] = `[Function]`;
 
-exports[`<Timer /> should handle resend button click 1`] = `[Function]`;
-
 exports[`<Timer /> should handle resend button click and match the snapshot 1`] = `[Function]`;
 
 exports[`<Timer /> should render and match the snapshot 1`] = `
