@@ -80,6 +80,7 @@ export const getCognitoFormFields = props => {
   });
   return formFields;
 };
+
 export const promisify = callback => {
   return new Promise((resolve, reject) => callback(resolve, reject));
 };

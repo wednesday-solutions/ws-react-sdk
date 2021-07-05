@@ -64,10 +64,6 @@ export const handlePhoneNumberValidationWithCountry = (rule, value, callback) =>
   }
   callback();
 };
-export const isFullnameValid = (requiredMsgId, invalidFullnameMsgId) => [
-  required(requiredMsgId),
-  pattern(FULLNAME_VALIDATION_RULE, invalidFullnameMsgId)
-];
 
 export const isAddressValid = (requiredMsgId, invalidMsgId) => [
   required(requiredMsgId),
@@ -156,7 +152,6 @@ export default {
   isMobileValid,
   isAddressValid,
   isPasswordValid,
-  isFullnameValid,
   isFullNameValid,
   doPasswordsMatch,
   isYearsOfExpValid,
