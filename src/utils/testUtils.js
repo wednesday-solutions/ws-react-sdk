@@ -25,3 +25,10 @@ export const apiResponseGenerator = (ok, data) => ({
   ok,
   data
 });
+
+export default {
+  timeout,
+  renderWithIntl,
+  getComponentStyles,
+  apiResponseGenerator
+};

@@ -12,7 +12,7 @@ import Timer from '@components/Timer';
 import { colors } from '@themes';
 import { resendConfirmationCode, updatePhoneNumberRequest } from '@services/cognito';
 import CustomInput from '@components/CustomInput';
-import { NOTIFICATION_TYPE, showNotification } from '@utils';
+import { NOTIFICATION_TYPE, showNotification } from '@utils/common';
 
 const ResendWrapper = styled.span`
   background-color: ${colors.white};

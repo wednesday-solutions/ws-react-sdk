@@ -6,3 +6,7 @@ export const RULE_NAMES = {
   TYPE: 'type',
   VALIDATOR: 'validator'
 };
+
+export default {
+  RULE_NAMES
+};

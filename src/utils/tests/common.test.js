@@ -5,7 +5,7 @@ import {
   promisify,
   convertGqlResponse,
   renderSelectOptions
-} from '../index';
+} from '../common';
 
 describe('Notification_Type tests', () => {
   it('should ensure that it is not null', () => {
@@ -95,7 +95,7 @@ describe('getCognitoFormFields tests', () => {
 
 describe('promisify tests', () => {
   it('should ensure that it is not returning null value', () => {
-    const promise = promisify();
+    const promise = promisify(() => {});
     expect(promise).not.toBeNull();
   });
 });

@@ -5,7 +5,6 @@ import icError from '@images/ic-error.svg';
 import icSuccess from '@images/ic-success.svg';
 import icWarning from '@images/ic-warning.svg';
 import { getCountryCodeAndStrippedNumber } from '@utils/validationUtils';
-import loadable from './loadable';
 
 const { Option } = Select;
 
@@ -85,10 +84,6 @@ export const getCognitoFormFields = props => {
 export const promisify = callback => {
   return new Promise((resolve, reject) => callback(resolve, reject));
 };
-export * from './validationUtils';
-export * from '../services/cognito';
-export * from './canvasUtils';
-export { loadable };
 
 export function convertGqlResponse(res) {
   return (res?.edges || []).map(a => a?.node).filter(a => !!a);
@@ -103,3 +98,10 @@ export function renderSelectOptions(options = []) {
     );
   });
 }
+
+export default {
+  promisify,
+  showNotification,
+  NOTIFICATION_TYPE,
+  getCognitoFormFields
+};

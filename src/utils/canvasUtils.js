@@ -54,3 +54,9 @@ export async function getCroppedImg(imageSrc, pixelCrop, rotation = 0) {
     }, 'image/jpeg');
   });
 }
+
+export default {
+  createImage,
+  getCroppedImg,
+  getRadianAngle
+};

@@ -19,7 +19,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '@src(.*)$': '<rootDir>/src/$1',
-    '@(containers|components|services|selectors|reducers|utils|themes)(.*)$': '<rootDir>/src/$1/$2',
+    '@(containers|components|selectors|reducers|utils|themes|services)(.*)$': '<rootDir>/src/$1/$2',
     '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/image.js',
     '.*\\.(css|less|styl|scss|sass)$': '<rootDir>/__mocks__/cssModule.js'
@@ -42,5 +42,7 @@ module.exports = {
   transformIgnorePatterns: ['<rootDir>/node_modules/(?!lodash-es)'],
 
   // Whether to use watchman for file crawling
-  watchman: true
+  watchman: true,
+
+  testPathIgnorePatterns: ['rollup/']
 };

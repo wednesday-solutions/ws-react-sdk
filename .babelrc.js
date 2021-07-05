@@ -3,6 +3,9 @@ module.exports = {
     [
       '@babel/preset-env',
       {
+        targets: {
+          esmodules: true
+        },
         modules: false,
         corejs: '3.6.5',
         useBuiltIns: 'entry'
@@ -11,21 +14,22 @@ module.exports = {
     '@babel/preset-react'
   ],
   plugins: [
-    'lodash',
+    // 'lodash',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-syntax-optional-chaining',
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-syntax-dynamic-import'
   ],
+  sourceType: 'module',
   env: {
     production: {
-      only: ['app'],
+      only: ['./src'],
       plugins: [
-        'lodash',
+        // 'lodash',
+        "@babel/plugin-transform-react-constant-elements",
         'transform-react-remove-prop-types',
         '@babel/plugin-transform-react-inline-elements',
-        '@babel/plugin-transform-react-constant-elements',
-        ['import', { libraryName: 'antd', style: true }, 'import-antd']
+        ['import', { libraryName: 'antd', style: true }, 'antd']
       ]
     },
     dev: {
