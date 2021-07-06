@@ -86,7 +86,7 @@
     "lodash": "4.17.20",
     "moment": "^2.29.1",
     "react-easy-crop": "^3.3.1",
-    "react-intl": "^4.5.1",
+    "react-intl": "5.20.3",
     "reselect": "^4.0.0",
     "style-loader": "^2.0.0",
     "yarn": "^1.22.10"
