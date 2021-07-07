@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Clickable /> component tests should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-gtsrHT eyZGKz"
+      data-testid="clickable"
+    >
+      <p
+        class="sc-bdnxRM caWfaj"
+        data-testid="t"
+      >
+        repo_list
+      </p>
+    </div>
+  </div>
+</body>
+`;
