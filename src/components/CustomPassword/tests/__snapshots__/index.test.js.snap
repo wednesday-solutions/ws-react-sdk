@@ -4,7 +4,7 @@ exports[`<CustomPassword /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <span
-      class="ant-input-affix-wrapper ant-input-password sc-bdfBwQ cEExve"
+      class="ant-input-affix-wrapper ant-input-password sc-bdnxRM jVlqMB"
     >
       <input
         action="click"

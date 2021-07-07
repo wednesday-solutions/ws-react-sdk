@@ -4,7 +4,7 @@ exports[`<CustomButton /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <button
-      class="ant-btn sc-bdfBwQ cDCNSQ"
+      class="ant-btn sc-bdnxRM inkUVv"
       data-testid="custom-button"
       type="button"
     />

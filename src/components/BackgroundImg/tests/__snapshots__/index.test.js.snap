@@ -4,7 +4,7 @@ exports[`<BackgroundImg /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <div
-      class="sc-bdfBwQ euZnZe"
+      class="sc-bdnxRM flMJkd"
       data-testid="background-img"
     />
   </div>

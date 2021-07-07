@@ -4,7 +4,7 @@ exports[`<CustomSearch /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <span
-      class="ant-input-group-wrapper ant-input-search sc-bdfBwQ dlsqiO"
+      class="ant-input-group-wrapper ant-input-search sc-bdnxRM kvguRN"
     >
       <span
         class="ant-input-wrapper ant-input-group"

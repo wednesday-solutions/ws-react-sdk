@@ -11,7 +11,7 @@ exports[`<Timer /> should render and match the snapshot 1`] = `
       data-testid="timer"
     >
       <p
-        class="sc-bdfBwQ gZxDMi sc-gsTCUz bruhyv"
+        class="sc-bdnxRM iIGKAt sc-gtsrHT grmOZR"
         data-testid="t"
       >
         RESEND

@@ -4,23 +4,23 @@ exports[`<Header /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <header
-      class="ant-layout-header sc-gsTCUz fNPrnw"
+      class="ant-layout-header sc-gtsrHT eKqqMW"
       data-testid="header"
       intl="[object Object]"
     >
       <img
-        class="sc-dlfnbm fruiyx"
+        class="sc-dlnjwi UbOhE"
         data-testid="logo"
       />
       <div
-        class="sc-hKgILt ftGSWA"
+        class="sc-hKFxyN cyCtHb"
       >
         <div
-          class="sc-gKsewC hDjYiG ant-dropdown-trigger"
+          class="sc-gKAaRy bHLKdT ant-dropdown-trigger"
         >
           <span
             aria-label="user"
-            class="anticon anticon-user sc-pFZIQ cZmbvs"
+            class="anticon anticon-user sc-pNWdM iXkZGc"
             role="img"
           >
             <svg
