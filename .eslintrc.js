@@ -17,12 +17,14 @@ module.exports = {
 
   extends: ['prettier', 'prettier/react', 'prettier-standard', 'plugin:react/recommended'],
   rules: {
-    'prettier/prettier': ['error', prettierOptions],
+    'prettier/prettier': [prettierOptions],
     'react/react-in-jsx-scope': 0,
     'import/no-webpack-loader-syntax': 0,
     'react/display-name': 0,
     curly: ['error', 'all'],
-    'no-console': ['error', { allow: ['error'] }]
+    'no-console': ['error', { allow: ['error'] }],
+    'key-spacing': [2, { beforeColon: false, afterColon: true }],
+    'arrow-parens': ['error', 'as-needed']
   },
   globals: {
     GLOBAL: false,

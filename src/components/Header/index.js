@@ -111,6 +111,14 @@ export const DefaultImg = styled(UserOutlined)`
     font-size: 1.5rem;
   }
 `;
+const Title = styled(T)`
+  && {
+    margin-bottom: 0;
+    ${fonts.dynamicFontSize(fonts.size.xRegular, 1, 0.5)};
+    display: flex;
+    align-self: center;
+  }
+`;
 
 function Header({
   logo,
@@ -119,6 +127,7 @@ function Header({
   handleOnLogoClick,
   hasNewNotifications,
   hasNotificationIcon,
+  header,
   ...props
 }) {
   const userName = toUpper(get(user, 'name', ''));
@@ -132,19 +141,24 @@ function Header({
   return (
     <StyledHeader {...props} data-testid="header">
       <Logo src={logo} data-testid="logo" onClick={handleOnLogoClick} />
+      <If condition={header}>
+        <Title type="heading" id={header} />
+      </If>
       <OptionContainer>
         <If condition={hasNotificationIcon}>
           <StyledBadge data-testid="notification-badge" dot={hasNewNotifications}>
             <StyledBellFilled />
           </StyledBadge>
         </If>
-        <Dropdown overlay={dropdownOverlay} placement="bottomRight" trigger={['hover']}>
-          <ProfileContainer>
-            <If condition={user?.photoUrl} otherwise={defaultProfile}>
-              <ProfileImg src={user?.photoUrl} />
-            </If>
-          </ProfileContainer>
-        </Dropdown>
+        <If condition={dropdownOverlay}>
+          <Dropdown overlay={dropdownOverlay} placement="bottomRight" trigger={['hover']}>
+            <ProfileContainer>
+              <If condition={user?.photoUrl} otherwise={defaultProfile}>
+                <ProfileImg src={user?.photoUrl} />
+              </If>
+            </ProfileContainer>
+          </Dropdown>
+        </If>
       </OptionContainer>
     </StyledHeader>
   );
@@ -156,7 +170,8 @@ Header.propTypes = {
   dropdownOverlay: PropTypes.element,
   handleOnLogoClick: PropTypes.func.isRequired,
   hasNewNotifications: PropTypes.bool,
-  hasNotificationIcon: PropTypes.bool
+  hasNotificationIcon: PropTypes.bool,
+  header: PropTypes.string
 };
 
 Header.defaultProps = {
