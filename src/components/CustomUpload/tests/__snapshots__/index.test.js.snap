@@ -4,7 +4,7 @@ exports[`<CustomUpload /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <span
-      class="sc-bdfBwQ dCikys"
+      class="sc-bdnxRM jdYmNn"
     >
       <div
         class="ant-upload ant-upload-select ant-upload-select-text"

@@ -4,7 +4,7 @@ exports[`<CustomRadio /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <label
-      class="ant-radio-wrapper sc-bdfBwQ gaYMUQ"
+      class="ant-radio-wrapper sc-bdnxRM dyaUqP"
     >
       <span
         class="ant-radio"

@@ -4,11 +4,11 @@ exports[`<MobileNumberWithCountryCode /> should render and match the snapshot 1`
 <body>
   <div>
     <div
-      class="sc-jSgupP cXdENn"
+      class="sc-jSFjdj FbyfL"
       data-testid="mobile-number-with-country-code"
     >
       <div
-        class="ant-row ant-form-item sc-dlfnbm ieHnGf sc-eCssSg bvlVKX"
+        class="ant-row ant-form-item sc-dlnjwi cPpdbK sc-eCApnc kzwLHv"
         data-testid="form-item"
       >
         <div
@@ -22,7 +22,7 @@ exports[`<MobileNumberWithCountryCode /> should render and match the snapshot 1`
             >
               <input
                 autocomplete="off"
-                class="ant-input sc-gsTCUz fLXihu"
+                class="ant-input sc-gtsrHT nnNxg"
                 data-testid="code-input"
                 id="countryCode"
                 maxlength="4"
@@ -34,7 +34,7 @@ exports[`<MobileNumberWithCountryCode /> should render and match the snapshot 1`
         </div>
       </div>
       <div
-        class="ant-row ant-form-item sc-dlfnbm ieHnGf sc-gKsewC kqPJey"
+        class="ant-row ant-form-item sc-dlnjwi cPpdbK sc-gKAaRy kJAoRv"
         data-testid="form-item"
       >
         <div
@@ -47,7 +47,7 @@ exports[`<MobileNumberWithCountryCode /> should render and match the snapshot 1`
               class="ant-form-item-control-input-content"
             >
               <span
-                class="ant-input-affix-wrapper sc-gsTCUz fLXihu sc-fubCfw bejoSb"
+                class="ant-input-affix-wrapper sc-gtsrHT nnNxg sc-fujyAs jFNWMi"
               >
                 <input
                   autocomplete="off"

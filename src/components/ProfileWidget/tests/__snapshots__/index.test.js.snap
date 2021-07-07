@@ -4,33 +4,33 @@ exports[`<ProfileWidget /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <div
-      class="sc-gsTCUz jhMctP"
+      class="sc-gtsrHT hABRft"
       data-testid="profile-widget"
     >
       <div
-        class="sc-dlfnbm bezHed"
+        class="sc-dlnjwi efXFDQ"
       >
         <div
-          class="sc-hKgILt epGQjk"
+          class="sc-hKFxyN dqNXkP"
         >
           <div
-            class="sc-iBPRYJ drIJeq"
+            class="sc-iCoGMd jFvNWr"
           >
             <label
               for="profilePic"
             >
               <div
-                class="sc-fubCfw jkfXYs"
+                class="sc-fujyAs bLYEml"
               >
                 <img
-                  class="sc-pFZIQ iUSsxT"
+                  class="sc-pNWdM fBRJbj"
                   src="IMAGE_MOCK"
                 />
               </div>
             </label>
             <input
               accept="image/jpeg, image/jpg, image/png"
-              class="sc-jrAGrp gmVUeL"
+              class="sc-jrsJWt iftWWR"
               data-cy="profilePic"
               id="profilePic"
               name="profilePic"
@@ -41,10 +41,10 @@ exports[`<ProfileWidget /> should render and match the snapshot 1`] = `
             data-testid="user-name-initial"
           >
             <div
-              class="sc-jSgupP jQoqQN"
+              class="sc-jSFjdj bwznNJ"
             >
               <p
-                class="sc-bdfBwQ bZojWc sc-gKsewC hdfsZu"
+                class="sc-bdnxRM caWfaj sc-gKAaRy fKxxhD"
                 data-testid="t"
               />
             </div>

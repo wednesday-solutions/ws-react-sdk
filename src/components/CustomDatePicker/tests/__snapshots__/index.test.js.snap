@@ -4,7 +4,7 @@ exports[`<CustomDatePicker /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <div
-      class="ant-picker sc-bdfBwQ jIWRuc"
+      class="ant-picker sc-bdnxRM dTBpIX"
     >
       <div
         class="ant-picker-input"
