@@ -12,8 +12,8 @@ function DelegateRollUp(dir) {
 
   this.setDirModules = function() {
     this.dirModules = readdirSync(this.dirPath, { withFileTypes: true })
-      .filter(({ name: dirName }) => !dirName?.includes('test'))
-      .filter(({ name: dirName }) => !dirName?.includes('index'));
+      .filter(({ name: dirName }) => !(dirName || []).includes('test'))
+      .filter(({ name: dirName }) => !(dirName || []).includes('index'));
   };
 
   this.getConfig = function() {
@@ -90,6 +90,26 @@ function DelegateRollUp(dir) {
       await bundle.close();
     }
     await build.apply(this);
+  };
+
+  this.watch = async function() {
+    const rollup = require('rollup');
+    const config = require('./config.js');
+    const { input, output } = this.getConfig();
+    const watch = {
+      clerarScreen: true
+    };
+    function watchFiles() {
+      const watcher = rollup.watch({ ...config, input, output, watch });
+      watcher.on('event', ({ result }) => {
+        if (result) {
+          result.close();
+        }
+      });
+      // stop watching
+      watcher.close();
+    }
+    watchFiles.apply(this);
   };
 
   this.setDirModules();
