@@ -40,12 +40,12 @@ exports[`<Header /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <header
-      class="ant-layout-header sc-gsTCUz fNPrnw"
+      class="ant-layout-header sc-gtsrHT eKqqMW"
       data-testid="header"
       intl="[object Object]"
     >
       <img
-        class="sc-dlfnbm fruiyx"
+        class="sc-dlnjwi UbOhE"
         data-testid="logo"
       />
       <p
