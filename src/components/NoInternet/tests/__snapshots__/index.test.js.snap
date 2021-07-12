@@ -5,25 +5,25 @@ exports[`<NoInternet /> should render and match the snapshot 1`] = `
   <div>
     <div>
       <div
-        class="sc-dlfnbm hWxGDI"
+        class="sc-dlnjwi iVCkmR"
       >
         <img
-          class="sc-hKgILt bmiPUu"
+          class="sc-hKFxyN hhWvmJ"
         />
         <p
-          class="sc-bdfBwQ bZojWc sc-gsTCUz cWOkuF"
+          class="sc-bdnxRM caWfaj sc-gtsrHT khIXST"
           data-testid="warning"
         >
           whoof
         </p>
         <p
-          class="sc-bdfBwQ bZojWc sc-eCssSg dfoiiY"
+          class="sc-bdnxRM caWfaj sc-eCApnc bVAJAc"
           data-testid="t"
         >
           slow_or_no
         </p>
         <p
-          class="sc-bdfBwQ bZojWc sc-jSgupP iCOWkB"
+          class="sc-bdnxRM caWfaj sc-jSFjdj jgAsNh"
           data-testid="t"
         >
           please_check

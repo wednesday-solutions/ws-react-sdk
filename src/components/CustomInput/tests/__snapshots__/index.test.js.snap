@@ -4,7 +4,7 @@ exports[`<CustomInput /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <input
-      class="ant-input sc-bdfBwQ gZAiAa"
+      class="ant-input sc-bdnxRM dlPndx"
       data-testid="custom-input"
       type="text"
       value=""

@@ -8,6 +8,7 @@ module.exports = {
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
 
+  testEnvironment: 'jsdom',
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
     global: {

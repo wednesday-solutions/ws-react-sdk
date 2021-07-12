@@ -4,7 +4,7 @@ exports[`<Warning /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <p
-      class="sc-bdfBwQ bZojWc sc-gsTCUz cWOkuF"
+      class="sc-bdnxRM caWfaj sc-gtsrHT khIXST"
       data-testid="warning"
     />
   </div>

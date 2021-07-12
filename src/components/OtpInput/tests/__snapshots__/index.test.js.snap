@@ -4,7 +4,7 @@ exports[`<OtpInput /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <span
-      class="ant-input-affix-wrapper sc-eCssSg bcxzLk sc-gKsewC cJKeBK"
+      class="ant-input-affix-wrapper sc-eCApnc cZuBYE sc-gKAaRy hJsanL"
     >
       <input
         class="ant-input"
@@ -17,13 +17,13 @@ exports[`<OtpInput /> should render and match the snapshot 1`] = `
         class="ant-input-suffix"
       >
         <span
-          class="sc-jSgupP hWZdxp"
+          class="sc-jSFjdj efObN"
         >
           <div
             data-testid="timer"
           >
             <p
-              class="sc-bdfBwQ gZxDMi sc-gsTCUz cEanxO"
+              class="sc-bdnxRM iIGKAt sc-gtsrHT jSvlHI"
               data-testid="t"
             >
               RESEND

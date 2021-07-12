@@ -4,12 +4,13 @@ exports[`<CustomInputNumber /> should render and match the snapshot 1`] = `
 <body>
   <div>
     <div
-      class="ant-input-number sc-bdfBwQ cOIlff"
+      class="ant-input-number sc-bdnxRM bVIukQ"
     >
       <div
         class="ant-input-number-handler-wrap"
       >
         <span
+          aria-disabled="false"
           aria-label="Increase Value"
           class="ant-input-number-handler ant-input-number-handler-up"
           role="button"
@@ -36,6 +37,7 @@ exports[`<CustomInputNumber /> should render and match the snapshot 1`] = `
           </span>
         </span>
         <span
+          aria-disabled="false"
           aria-label="Decrease Value"
           class="ant-input-number-handler ant-input-number-handler-down"
           role="button"
@@ -66,13 +68,9 @@ exports[`<CustomInputNumber /> should render and match the snapshot 1`] = `
         class="ant-input-number-input-wrap"
       >
         <input
-          aria-valuemax="9007199254740991"
-          aria-valuemin="-9007199254740991"
           autocomplete="off"
           class="ant-input-number-input"
           data-testid="custom-input-number"
-          max="9007199254740991"
-          min="-9007199254740991"
           role="spinbutton"
           step="1"
           value=""
