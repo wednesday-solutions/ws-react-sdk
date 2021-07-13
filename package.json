@@ -22,7 +22,8 @@
   "homepage": "https://github.com/wednesday-solutions/ws-react-sdk",
   "license": "MIT",
   "scripts": {
-    "prepare": "yarn install-peers && ./rollup-master.sh",
+    "prepare": "yarn install-peers",
+    "prepublishOnly": "yarn rollup:prod",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .eslintignore",
     "lint:eslint:fix": "eslint --ignore-path .eslintignore --fix",
@@ -46,9 +47,6 @@
     "rollup:watch": "yarn rollup:watch:services | yarn rollup:watch:themes | yarn rollup:watch:utils | yarn rollup:watch:components",
     "rollup:dev": "./rollup-develop.sh",
     "rollup:prod": "./rollup-master.sh",
-    "webpack": "cross-env NODE_ENV=development  && npx webpack -c ./webpack.config.js --mode=development",
-    "webpack:prod": "cross-env NODE_ENV=production && npx webpack -c ./webpack.config.js --mode=production",
-    "prepublishOnly": "yarn webpack:prod",
     "dev": "rm -rf lib && yarn rollup:watch"
   },
   "browserslist": [
