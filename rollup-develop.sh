@@ -9,4 +9,4 @@ do
     esac
 done
 
-FOLDER=$1 WATCH=$WATCH node rollup/roller.js
+ENV_NAME=development FOLDER=$1 WATCH=$WATCH node rollup/roller.js

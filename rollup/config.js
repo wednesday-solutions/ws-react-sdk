@@ -75,11 +75,12 @@ const config = {
       ]
     }),
     terser(),
-    analyze({
-      summaryOnly: true,
-      showExports: true,
-      hideDeps: true
-    })
+    process.env.ENV_NAME === 'development' &&
+      analyze({
+        summaryOnly: true,
+        showExports: true,
+        hideDeps: true
+      })
   ],
   external: [
     'antd',
