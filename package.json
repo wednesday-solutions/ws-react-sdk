@@ -1,6 +1,6 @@
 {
   "name": "ws-react-sdk",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "sideEffects": false,
   "description": "Library of common components, containers, and utils used across the Wednesday Ecosystem",
   "main": "lib/es/index.js",
