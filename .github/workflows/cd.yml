@@ -24,17 +24,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn
-
-      - name: Build
-        run: ./rollup-${{steps.vars.outputs.branch}}.sh
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: Gitflow
-          author_email: git@wednesday.is
-          message: 'Created lib'
-          add: 'lib/'
-
       - name: Bump version
         run: |
           git config --global user.email "git@wednesday.is"
