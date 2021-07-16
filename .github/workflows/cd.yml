@@ -7,7 +7,7 @@ on:
       - develop
 
 jobs:
-  build_and_test:
+  publish:
     name: checkout-build-commit
     runs-on: ubuntu-latest
     strategy:
@@ -19,7 +19,7 @@ jobs:
         id: vars
         run: echo ::set-output name=branch::${GITHUB_REF#refs/*/}
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
