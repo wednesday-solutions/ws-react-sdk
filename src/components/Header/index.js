@@ -142,7 +142,7 @@ function Header({
     <StyledHeader {...props} data-testid="header">
       <Logo src={logo} data-testid="logo" onClick={handleOnLogoClick} />
       <If condition={header}>
-        <Title data-testId='title' type="heading" id={header} />
+        <Title data-testId="title" type="heading" id={header} />
       </If>
       <OptionContainer>
         <If condition={hasNotificationIcon}>
@@ -152,7 +152,7 @@ function Header({
         </If>
         <If condition={dropdownOverlay}>
           <Dropdown overlay={dropdownOverlay} placement="bottomRight" trigger={['hover']}>
-            <ProfileContainer >
+            <ProfileContainer>
               <If condition={user?.photoUrl} otherwise={defaultProfile}>
                 <ProfileImg src={user?.photoUrl} />
               </If>
