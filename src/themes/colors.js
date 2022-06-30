@@ -5,9 +5,9 @@
  * That allows to change them more easily later on.
  */
 
-const primary = '#af0974'; // pawly-fuchsia
+const primary = '#af0974'; // app-fuchsia
 const text = '#212529';
-const secondary = '#00244f'; // pawly-blue
+const secondary = '#00244f'; // app-blue
 const success = '#28a745';
 const error = '#dc3545';
 const white = '#ffffff';
@@ -19,8 +19,8 @@ const colors = {
   transparent: 'rgba(0,0,0,0)',
   darkFuchsia: '#af0974',
   lightGray: '#DDDDDD',
-  pawlyBlue: '#00244f',
-  pawlyBlue0: 'rgba(0, 36, 79, 0.5)',
+  appBlue: '#00244f',
+  appBlue0: 'rgba(0, 36, 79, 0.5)',
   blueBackground: '#f7f9fa',
   vetBlue: 'rgba(0,36,79,0.7)',
   paleWhite: 'rgba(255, 255, 255, 0.1)',

@@ -30,7 +30,7 @@ const ClawImage = styled.img`
 
 const Slow = styled(T)`
   ${fonts.style.standard()};
-  color: ${colors.pawlyBlue};
+  color: ${colors.appBlue};
   margin: 0rem;
   ${media.largeMobile.max(`
   font-size:0.75rem;

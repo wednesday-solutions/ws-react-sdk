@@ -11,10 +11,10 @@ import styled from 'styled-components';
 
 const CR = styled(Radio)`
   .ant-radio .ant-radio-inner {
-    border-color: ${colors.pawlyBlue};
+    border-color: ${colors.appBlue};
   }
   .ant-radio-checked .ant-radio-inner:after {
-    background-color: ${colors.pawlyBlue};
+    background-color: ${colors.appBlue};
   }
 `;
 

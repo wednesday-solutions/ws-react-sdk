@@ -11,10 +11,10 @@ import styled from 'styled-components';
 
 const CB = styled(Checkbox)`
   .ant-checkbox .ant-checkbox-inner {
-    border-color: ${colors.pawlyBlue};
+    border-color: ${colors.appBlue};
   }
   .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: ${colors.pawlyBlue};
+    background-color: ${colors.appBlue};
   }
 `;
 

@@ -123,7 +123,7 @@ const StyledModal = styled(Modal)`
   }
 `;
 const CancelButton = styled(Button)`
-  color: ${colors.pawlyBlue};
+  color: ${colors.appBlue};
   ${fonts.weights.bold()};
   font-stretch: normal;
   line-height: 1;
@@ -150,7 +150,7 @@ const SliderDiv = styled.div`
   .anticon {
     position: absolute;
     top: -2px;
-    color: ${colors.pawlyBlue};
+    color: ${colors.appBlue};
     font-size: 16px;
     line-height: 1;
   }
