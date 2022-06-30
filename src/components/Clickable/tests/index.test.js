@@ -9,7 +9,7 @@ import { renderWithIntl } from '@utils/testUtils';
 import Clickable from '../index';
 
 describe('<Clickable /> component tests', () => {
-  let clickSpy
+  let clickSpy;
   beforeEach(() => {
     clickSpy = jest.fn();
   });
