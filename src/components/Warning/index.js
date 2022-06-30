@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import T from '../T';
 const StyledWarning = styled(T)`
   && {
-    color: ${colors.pawlyBlue};
+    color: ${colors.appBlue};
     margin: 2rem 0rem 0rem 0rem;
     ${fonts.weights.fw600()};
 
